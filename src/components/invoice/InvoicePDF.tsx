@@ -6,7 +6,7 @@ import { amountInWords } from "../../utils/numberToWords";
 import logo from "../../assets/logo.png";
 import stamp from "../../assets/stamp.jpg";
 import signProprietor from "../../assets/sign-proprietor.jpg";
-import signSignatory from "../../assets/sign-signatory.jpg";
+import signSignatory from "../../assets/sign-authorised-2.png";
 
 const GOLD = "#9a6700";
 const INK = "#1a1a1a";
@@ -244,9 +244,13 @@ export default function InvoicePDF({ data }: { data: InvoiceData }) {
               <View style={s.signImgBox}><Image src={stamp} style={s.stampImg} /></View>
               <Text style={s.signLine}>Company Seal</Text>
             </View>
-            <View style={s.signCell}>
+            {/* <View style={s.signCell}>
               <View style={s.signImgBox}><Image src={signSignatory} style={s.signAuth} /></View>
               <Text style={s.signLine}>Authorised Signatory</Text>
+            </View> */}
+                <View style={[s.signCell, { paddingRight: 0 }]}>
+              <View style={s.signImgBox} />
+               <Text style={s.signLine}>Authorised Signatory</Text>
             </View>
             <View style={[s.signCell, { paddingRight: 0 }]}>
               <View style={s.signImgBox} />
